@@ -15,7 +15,7 @@ os.environ['GOOGLE_API_KEY'] = GOOGLE_API_KEY
 def get_youtube_transcript(video_id):
     try:
         transcript = YouTubeTranscriptApi.get_transcript(video_id)
-        return " ".join([entry['text'] for entry in transcript])    #creates a single string of text
+        return " ".join([entry['text'] for entry in transcript])  
     except Exception as e:
         print(f"An error occured while fetching script: {e}")
         return None
